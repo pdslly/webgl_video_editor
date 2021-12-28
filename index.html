@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(2, 50%);
+            grid-gap: 10px;
+            background-color: skyblue;
+        }
+
+        .b-control {
+            background-color: #fff;
+            grid-column: 1/3;
+        }
+
+        .b-webgl,
+        .b-video {
+            background-color: #fff;
+        }
+
+        .video {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="b-video">
+        <video id="video" class="video" controls>
+            <source src="./video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+    </section>
+    <section class="b-webgl" id="container">
+    </section>
+    <section class="b-control"></section>
+    <script src="./main.js" type="module"></script>
+</body>
+
+</html>
